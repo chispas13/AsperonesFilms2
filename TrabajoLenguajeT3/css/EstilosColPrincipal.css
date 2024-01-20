@@ -1,0 +1,96 @@
+/* Aquí establecemos el ancho relativo de la columna principal. */
+.columna-principal {
+    width: 65%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+  }
+
+ /* Estilos para sección de Películas Destacadas */
+.pelis-destacadas .pelicula {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pelis-destacadas .pelicula img{
+    justify-content: center;
+    width: 250px;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Estilos Para la parte de Marketing */
+
+   .marketing {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .frase-marketing {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .pelicula-marketing{
+    margin: 5px;
+  }
+  .pelicula-marketing h3{
+    color: white;
+    text-align: center;
+  }
+  .pelicula-marketing img {
+    border-radius: 10px;
+  }
+  
+  /* Media Querys */
+
+   /* Estilos para dispositivos móviles */
+   @media screen and (max-width: 767px) {
+    .peliculas_marketing {
+      display: block;
+      /* Con esto conseguimos que se muestre todo en una sola columna. */
+    }
+    .peliculas_marketing img{
+        max-width: 100%;
+        height: auto;
+    }
+  }
+  /* Estilos para tabletas */
+  @media screen and (min-width: 768px) and  (max-width: 1023px) {
+    .peliculas_marketing {
+      /* Estilos específicos para tabletas */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Muestra 2 películas por fila */
+      justify-content: center;
+    }
+    .peliculas_marketing img{
+        max-width: 100%;
+        height: auto;
+    }
+  }
+  /* Estilos para pantallas de PC */
+  @media screen and (min-width: 1024px) {
+    .peliculas_marketing {
+      /* Estilos específicos para PC */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Muestra 3 películas por fila */
+      justify-content: center;
+      align-items: center;
+    }
+    .peliculas_marketing img{
+        max-width: 100%;
+        height: auto;
+    }
+  }
+ 
+
+  /* Efecto de hover */
+  .pelis-destacadas .pelicula:hover {
+    background-color: #c7d8fd;
+    transition: background-color 0.5s ease;
+  }
